@@ -1,0 +1,7 @@
+[user]
+	name = tomatine
+	email = tomatine86@gmail.com
+[credential "https://github.com"]
+	helper = !gh auth git-credential
+[core]
+	editor = /usr/bin/vim
