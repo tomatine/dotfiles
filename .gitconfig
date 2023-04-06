@@ -1,7 +1,25 @@
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
 [user]
 	name = tomatine
 	email = tomatine86@gmail.com
-[credential "https://github.com"]
-	helper = !gh auth git-credential
-[core]
-	editor = /usr/bin/vim
+	signingkey = 1E9EA9F90601F331C73EC217F0EED5CE324F0778
+[commit]
+	gpgsign = true
+[push]
+	autoSetupRemote = true
+[gui]
+[alias]
+  lg = log --graph --pretty=format:'%Cred%h %G?%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  lga = log --graph --all --pretty=format:'%Cred%h %G?%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  st = status
+  sw = switch
+  swc =switch -c
+  b = branch
+[color]
+	ui = auto
+[gpg]
+	program = C:\\Program Files (x86)\\GnuPG\\bin\\gpg.exe
